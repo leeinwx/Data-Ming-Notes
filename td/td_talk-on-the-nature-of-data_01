@@ -1,0 +1,67 @@
+* 2000:Data Mining knowledge Discovery from Databases;
+* 2010:Big Data
+* 2020:Data Science
+  * The idea remains the same.
+    * Put the fastest,largest hadrware together with the fastest algorithms and the most efficient programing systems to solve problems in the commercial and scientific worlds
+  * There are many to whom "data science" means machine learning.
+  * Statisticians tend to believe that statistics is the essential ingredient in data science.
+  * My view:data science is a natural evolution of database systems research.
+    * More importantly:the best preparation for success in data science is the core of CS education with specialization suitable to handing large-scale data.
+* Machine learning has created some very powerful approaches to algorithm development.
+  * Often clear winners over conventional algorithms.
+* Statisticians are really smart people who have over the years,developed many vital concepts and techniques.
+  * Many are now doing the same sort of work that we see in computer science.
+* Drew Conway's Venn Diagram:How a Statistician Sees Data Science.
+  * ![](drew%20conway.png)
+  * My option:
+    * Substantive Expertise => Normally "domain knowledge"
+    * Computer Science => It's called CS.And it's a lot more than writing code.
+    * Danger Zone! => Danger?Really?Most data science operates here.
+    * Traditional Rearch => True?Applying math without algorithms is a tradition?
+    * Machine Learning => Really?ML is just math/sta Implemented,with out application?
+* My Data-science Venn Diagram
+  * ![](./my%20data-science%20venn%20diagram.png)
+* The Statistics Claim to Fame
+  * Concede:Stat is useful when designing randomized algorithms and when analyzing the expected behavior of algorithms on random data.
+  * Concede:There are applications where statistical validity is the critical issue.
+  * Example:When census data is reported,there are political consequences to statements like "10% of the population is below the poverty line."
+    * You need to get that right.
+* A Problem with the Stats Approach
+  * Statisticians put too much value on "analyzing" data,rather than using the data to solve problems.
+  * Example:Statistics version of "hackathon" that provides data and simply asks contestants to "find something interesting" in the data.
+  * Why not ask for an algorithm to do something with the data that people will find useful?
+    * Like Kaggle Competitions,e.g.
+* Another Stats Problem
+  * Data science is largely experimental.
+    * We'll learn the behavior of our algorithms in the real world and modify them if the performance is bad.
+  * The mistake to avoid:In most applications of data science,doing the best you can is more important than knowing exactly how well you are doing.
+* Example:Phishing Attacks
+  * Google is pretty good at detecting email that is a phishing attack.
+  * How good?
+  * Who can tell?
+    * Since attacks evolve,even if we had a precise statistical analysis of the rate of failure today,it would mean little tommorrow.
+  * And if you regard this application of "hacking" as in the "danger zone",i claim the real danger is people seding their life savings to someone who claims to be a Nigerian prince.
+* Many Other Examples
+  * Relating individual genomes to proper medical treatment.
+  * Predicting paths of hurriances,typhoons,etc.
+  * Even predicting best ads to show or movies to recommend.
+* The Machine-Learning Claim
+  * Concede:Many important problems in data science are asking for a model of some phenomenon in some application area.
+  * Concede:Machine learning often provides more accurate models than other aooproaches.
+  * ![](./hype%20cycle%202015.png)
+  * ![](./hype%20cycle%202016.png)
+  * ![](./hype%20cycle%202017.png)
+  * ![](./hype%20cycle%202018.png)
+* Objections to "ML=Data Science"
+  * Objection #1:The ML community claims as its own ideas that really came from elsewhere/
+    * E.g.,clustering,gradient descent,association rules.
+  * Objection #2:Not every data-science problem is the search for a model.
+  * Objection #3:Understandability(sometimes)counts.
+* Association Rules
+  * Association rules are if-then rules about a set of "items" that cause effects.
+  * Discovered by counting co-occurrences of sets of items in "baskets."
+  * Developed by the database community in the 1990's.
+* Example:Phishing Attacks
+  * Items are words in phishing emails(the "baskets").
+  * Discovered rules tell that certain combinations of words indicate phishing attacks.
+    * E.g.:"Nigerian" and "Prince" -> phishing
