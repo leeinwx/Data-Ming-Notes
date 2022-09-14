@@ -114,3 +114,29 @@
 * Approximate Counting
   * Given a stream of elements,(approximately)how many different elements are there.
   * Example:user logging on to Facebook;how many distinct users in a mouth?
+  * Naive solution:keep a hash table of every user you've seen(to tell if a user is new this month),and keep a count of all users you've seen.
+    * Problem:uses a lot of space.
+  * In next example is a case where the hash tables don't grow too large,but there are many tables.
+* Example:Approximate Counting
+  * Web crawlers cannot visit every reachable page.
+  * A common strategy is to prefer to visit high PageRank pages.
+    * But you don't compute PageRank while crawling.
+  * An approximation is the number of times a page has been reached.
+  * For each page reached but not crawled,count the number of distinct predecessor pages.
+    * An approximation to the count is just fine,since we're only guessing the best pages to crawl anyway.
+* Flajolet-Martin Algorithm
+  * Gives approximate count,using much less space than a table of elements.
+  * Keep several(e.g, 100)variables,each of which is a small integer.
+  * For each variable V there is a hash function $h_v$.
+  * Hash each input(user name,e.g)to a bit string.
+  * The tail length of a bit string is the number of consecutive 0's at its end.
+  * V records the largest tail length seen so far using its hash function.
+  * Duplicates cannot affect the value of V.
+* Flajolet-Martin Algorithm-(2)
+  * If variable V holds largest tail length R,then V estimates you have seen $2^R$ different elements.
+  * That's roughly how many different values you need to get R 0's at end.
+  * Combine the estimates from different variables(a bit tricky)to get an accurate estimate of the number of different values seen.
+* Colclusions
+  * 1.Data science is a natural evolution of the work in many branches of computer science,especially work on managing large datasets,to have impact on science and industry.
+  * 2.Statisticians almost got it right,but are too focused on analysis,not enough on solving people's problems.
+  * 3.Machine learning is a big part of data science,but far from the whole thing.
