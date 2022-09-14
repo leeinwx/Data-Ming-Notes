@@ -65,3 +65,52 @@
   * Items are words in phishing emails(the "baskets").
   * Discovered rules tell that certain combinations of words indicate phishing attacks.
     * E.g.:"Nigerian" and "Prince" -> phishing
+  * Performance is inferior to even simple ML models,e.g.,put a (positive or negitive) weight on each word and declare phishing if sum of weights exceeds a threshold.
+  * But...
+* Understandability
+  * Association rules are understandable
+    * if you actually are a Nigerian prince,and your emails keep winding up in spam,at least you know why.
+  * In comparsion,when you ask Google why it declared an email to be spam,it usually answers "because it looks like other emails that people said were spam."
+    * I.e.,it matches whatever model we're using today.
+  * The problem is more serious if you want to know why your insurance premiusms went up for no apparent reason.
+* My Theory of When to Use ML
+  * 1.The problem needs to require a model of something.
+  * 2.There is no need to explain to anyone what the model is doing.
+  * 3.The problem has to be something you don't understand well.
+    * Example:early ML company "Whizbang Labs" went bankrupt trying to beat natural intelligence in identifying resumes on the Web.
+* Not All Big-Data Problems Require Models
+  * My two favorite examples:
+    * 1.Locality-sensitive hashing.
+    * 2.Approximate counting(Flajolet-Martin algorithm).
+  * Plug for book Mining of Massive Datasets,by J.Leskovec,A. Rajarman and U:
+    * It's free,downloadable at www.mmds.ord
+    * Covers these and other topics in data science.
+* Locality-Sensitive Hashing
+  * Used when we need to compare each pair of items from a large set and find similar pairs.
+  * Example:Entity resolution.
+    * Given a set of records with fields like name or phone#,find those records that likely refer to the same person.
+      * Tricky,because names get misspelled,phone change,etc.
+    * Even i million records implies half a trillion comparisons to see if two records have similar enough values to be likely matches.
+  * Notice:no model is involved.
+* LSH-(2)
+  * You can get better than $O(n^2)$ performance if you are willing to accept a few false negatives(e.g.,similar records that are not merged).
+  * Key is inventing suitable hash functions that throw all items into buckets,such that:
+    * 1.If items are simliar,they have a good chance of winding up in the same bucket.
+    * 2.If not similar,they rarely wind up in the same bucket.
+  * Hash many times,only compare items that wind up in the same bucket at least once.
+* LSH Example
+  * For items that are records about people,one hash function might put records in the same bucket iff they have identical name values.
+  * Another hashing might put records in the same bucket iff they have identical phone values.
+  * Etc., etc.,hashing on more fields that typical records will possess.
+* LSH Example-(2)
+  * Hope that if two records represent the same person,they will be identical in at least one field;different people won't agree in any field.
+  * Meeting in a bucket only makes items be candidates for matching;you still need to compare and judge.
+    * Different people can have the same name.
+    * Phone #'s can be moved from one person to another,and typos occur.
+* LSH for Entity Resolution-Summary
+  * Use fields like name and phone to hash all the records several times.
+  * Compare only the(hopefully)small number of pairs of records that appear together in a bucket at least once.
+  * False negatives:unfortunately,you miss pairs that do represent the same person but happen not to agree exactly in any of the fields used for hashing.
+* Approximate Counting
+  * Given a stream of elements,(approximately)how many different elements are there.
+  * Example:user logging on to Facebook;how many distinct users in a mouth?
