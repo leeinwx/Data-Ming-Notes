@@ -3,17 +3,11 @@
 #### Illinois Institute of Technology
 
 #### 参考书籍
-* Introduction to Data Mining, 2nd Edition, Pang-Ning Tan, Michael Steinbach, Vipin Kumar; ISBN-13: 978-
-0133128901
-* R For Everyone, 2
-nd Edition, Jared P. Lander, Addison Wesley, ISBN-13: 978-
-0134546926
-* Mining of massive datasets, 2e, Jure Leskovec, Anand Rajaraman and Jeffrey Ullman, Cambridge University Press,
-ISBN-13: 978-1-107-07723-2
-* Data mining and analysis: Fundamental concepts and algorithms, 2e, Mohammed Zaki and Wagner Meira, Jr.,
-Cambridge University Press, ISBN-13: 978-0521766333
-* An introduction to statistical learning with applications in R, 2e, Gareth James, Daniela Witten, Trevor Hastie and
-Robert Tibshirani, Springer, ISBN-13: 978-1-4614-7137-0
+* Introduction to Data Mining, 2nd Edition, Pang-Ning Tan, Michael Steinbach, Vipin Kumar; ISBN-13: 978-0133128901
+* R For Everyone, 2nd Edition, Jared P. Lander, Addison Wesley, ISBN-13: 978-0134546926
+* Mining of massive datasets, 2e, Jure Leskovec, Anand Rajaraman and Jeffrey Ullman, Cambridge University Press,ISBN-13: 978-1-107-07723-2
+* Data mining and analysis: Fundamental concepts and algorithms, 2e, Mohammed Zaki and Wagner Meira, Jr.,Cambridge University Press, ISBN-13: 978-0521766333
+* An introduction to statistical learning with applications in R, 2e, Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani, Springer, ISBN-13: 978-1-4614-7137-0
 
 #### R语言参考资料
 * https://ademos.people.uic.edu/index.html
