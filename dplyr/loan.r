@@ -3,7 +3,7 @@ library(rpart.plot)
 
 rm(list=ls())
 
-setwd("/home/vkg/IIT/CS422/lectures/lecture-4")
+setwd("/Users/lee/Library/Mobile\ Documents/com~apple~CloudDocs/IIT/CS422/Notes/dplyr")
 
 df <- read.csv("loan.csv", header=T, sep=",")
 

@@ -9,7 +9,7 @@ library(rpart)
 library(caret)
 library(rpart.plot)
 
-setwd("/home/vkg/IIT/CS422/lectures/lecture-4")
+setwd("/Users/lee/Library/Mobile\ Documents/com~apple~CloudDocs/IIT/CS422/Notes/dplyr")
 
 # Example of tree pruning using the ecoli dataset (see
 # https://archive.ics.uci.edu/ml/datasets/ecoli)
