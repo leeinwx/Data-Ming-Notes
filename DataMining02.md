@@ -26,7 +26,7 @@
     | 计算机科学 | 机器学习 |
     | :----- | :---- |
     | 确定的规则 | 泛化/归纳是关键Generalization |
-    | 错误是无法容忍的 | 错误是景观的一部分</br>&emsp;新冠检测</br>&emsp;自动驾驶 |
+    | 错误是无法容忍的 | 错误是结果的一部分</br>&emsp;新冠检测</br>&emsp;自动驾驶 |
     | 算法不会学习而被提供 | 算法学习(反向传播backprop、遗传编程genetic programming) |
     | 编程(数据)==> 输出 程序本身最重要 | 数据(程序)==> 模型 ==>输出 数据本身最重要 |
 
@@ -119,16 +119,16 @@
     * $$E[X]=\displaystyle\sum_{i=1}^kx_ip_i=x_1p_1+x_2p_2+...+x_kp_k$$
       * 离散型随机变量的一切可能的取值，与对应的概率乘积之和
   * 期望的属性
-    * $$E[X+Y]=E[X]+E[Y]$$ 期望的线性 X与Y的期望和等于两个期望分开计算后和
-    * $$E[aX]=aE[X]$$ a是个常量
-    * $$E[XY]=E[X]\cdot{E[Y]}$$ X和Y是独立的
-    * $$E[E[X]]=E[X]$$
+    * $E[X+Y]=E[X]+E[Y]$ 期望的线性 X与Y的期望和等于两个期望分开计算后和
+    * $E[aX]=aE[X]$ a是个常量
+    * $E[XY]=E[X]\cdot{E[Y]}$ X和Y是独立的
+    * $E[E[X]]=E[X]$
   * 例子:骰子有6面，掷到每一面的概率相同，都是六分之一
     * 平均值:3.5
     * 期望值:如果投掷的次数够多，期望值就越接近平均值即3.5
 
   * 中位数median(sample)
-    * $$P(X\leq{m})\geq{\frac{1}{2}}\text{\,{and}\,}P(X\geq{m})\geq{\frac{1}{2}}$$
+    * $P(X\leq{m})\geq{\frac{1}{2}}\text{\,{and}\,}P(X\geq{m})\geq{\frac{1}{2}}$
     * 中位数是否robust(或稳定stable)
       * 是的
         * 不受极端值影响
@@ -137,24 +137,24 @@
   * 众数mode(sample)
     * 在随机变量中出现最多的值
     * 在剧中趋势的度量中可能用不到
-    * $$mode(X)=arg\,{max}\,\hat{f}(x)$$
-    $$\hat{f}(x)=P(X=x)=\frac{1}{n}\displaystyle\sum_{i=1}^nI(x_i=x)$$
+    * $mode(X)=arg\,{max}\,\hat{f}(x)$
+    $\hat{f}(x)=P(X=x)=\frac{1}{n}\displaystyle\sum_{i=1}^nI(x_i=x)$
     where
-    $$I(x_i=x)=\begin{cases}
+    $I(x_i=x)=\begin{cases}
         1 &if\,x_i=x\\
         0 &if\,x_i\neq{x}
-    \end{cases}$$
+    \end{cases}$
     * ![](/data_mining_6.png)
 
   * 离散程度描述:方差variance和标准差standard deviation
     * 方差:衡量随机变量或一组数据时离散程度的度量，概率论中方差用来度量随机变量和其数学期望(即均值)之间的偏离程度
-    * 样本方差公式:$$var(X)=\sigma^2=\frac{1}{n-1}\displaystyle\sum_{i=1}^n(x_i-\hat\mu)^2$$
+    * 样本方差公式:$var(X)=\sigma^2=\frac{1}{n-1}\displaystyle\sum_{i=1}^n(x_i-\hat\mu)^2$
     * 样本标准差:样本方差的开方
-    * 样本标准差公式:$$\sigma=\sqrt{\frac{1}{n-1}\displaystyle\sum_{i=1}^n(x_i-\hat\mu)^2}$$
+    * 样本标准差公式:$\sigma=\sqrt{\frac{1}{n-1}\displaystyle\sum_{i=1}^n(x_i-\hat\mu)^2}$
 
   * 并不仅仅只有标准差
-    * 最大偏差Maximal deviation:$$maxdev(X)=max(|x_i-\mu|)\forall{x_i}\in{X}$$
-    * 平均离差Mean absolute deviation:$$mad(X)=\frac{1}{n}\displaystyle\sum_{i=1}^n|x_i-\mu|.\forall{x_i}\in{X}$$
+    * 最大偏差Maximal deviation:$maxdev(X)=max(|x_i-\mu|)\forall{x_i}\in{X}$
+    * 平均离差Mean absolute deviation:$mad(X)=\frac{1}{n}\displaystyle\sum_{i=1}^n|x_i-\mu|.\forall{x_i}\in{X}$
     * ![](/data_mining_7.png)
 
   * 同样我们会考虑双变量分析，试图理解双变量$x_1$与$x_2$的关系，通常我们可以将向量看作是一个2D空间

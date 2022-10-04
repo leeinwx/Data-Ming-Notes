@@ -85,7 +85,7 @@
           * 信息的定义与熵完全相反 熵需要最小化，信息则需要最大化
         * 所以当我们基于class拆分的时候，问题的关键在于这个class的属性中能给到多少information
           * 当时纯净分布时候，给我们最大的信息
-          * 不想干的属性给我们很少信息
+          * 不相干的属性给我们很少信息
           * 所以在我们最大化信息的同时也在最小化熵
             * infomation gain(IG) = Entropy before the split - Entropy after the split
           * 在例子中我们需要基于Homeowner、Marital Status、Annual Income拆分，需要分别计算IG
